@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚠ WARNING ⚠</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden;background:#000;animation:bgFlash .35s infinite;}
+@keyframes bgFlash{0%{background:#000;}50%{background:#7a0000;}100%{background:#000;}}
+.warning{position:absolute;top:30px;font-size:55px;font-weight:bold;color:#f00;text-shadow:0 0 20px red;animation:blink .5s infinite;}
+@keyframes blink{50%{opacity:.2;}}
+.card{width:390px;padding:30px;background:rgba(20,20,20,.95);border:3px solid red;border-radius:15px;text-align:center;box-shadow:0 0 30px red;animation:shake .15s infinite;}
+@keyframes shake{0%{transform:translateX(-2px);}50%{transform:translateX(2px);}100%{transform:translateX(-2px);}}
+button{padding:15px 35px;background:red;border:none;color:#fff;font-size:20px;border-radius:8px;cursor:pointer;margin:20px;box-shadow:0 0 20px red;}
+h2{color:red;margin-bottom:15px;}p{color:#fff;font-size:20px;margin:10px;}small{display:block;margin-top:15px;color:#ff6666;font-size:22px;}
+</style>
+</head>
+<body>
+<div class="warning">⚠ WARNING ⚠</div>
+<div class="card">
+<h2>WARNING</h2>
+<button onclick="startAlarm()">WARNING</button>
+<p>Nobody can see you like my eyes</p>
+<p>My eyes on you</p>
+<small>To Miss Fatima</small>
+</div>
+<audio id="alarm" loop><source src="alarm.mp3" type="audio/mpeg"></audio>
+<script>
+function startAlarm(){document.getElementById("alarm").play();}
+</script>
+</body>
+</html>
